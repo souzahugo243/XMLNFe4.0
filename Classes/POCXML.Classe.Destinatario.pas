@@ -20,9 +20,6 @@ type
       procedure SetEmail(const AValue: string);
     private
       constructor Create;
-      procedure Delete;
-      procedure Insert;
-      procedure Update;
   end;
 implementation
 
@@ -35,19 +32,9 @@ begin
   FEmail := EmptyStr;
 end;
 
-procedure TDestinatarioNFE.Delete;
-begin
-
-end;
-
 function TDestinatarioNFE.GetEmail: string;
 begin
   Result := FEmail;
-end;
-
-procedure TDestinatarioNFE.Insert;
-begin
-
 end;
 
 procedure TDestinatarioNFE.SetEmail(const AValue: string);
@@ -58,11 +45,6 @@ begin
   end;
 
   FEmail := AValue;
-end;
-
-procedure TDestinatarioNFE.Update;
-begin
-
 end;
 
 end.

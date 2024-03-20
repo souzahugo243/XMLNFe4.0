@@ -52,23 +52,6 @@ type
     procedure SetIndPres(const AValue: Integer);
     procedure SetProcEmi(const AValue: Integer);
     procedure SetVerProc(const AValue: UnicodeString);
-    procedure AddListaItem( FcProd   : string ;
-                            FcEAN    : string ;
-                            FxProd   : string ;
-                            FNCM     : Integer;
-                            FCEST    : Integer;
-                            FCFOP    : Integer;
-                            FuCom    : string ;
-                            FqCom    : Integer;
-                            FvUnCom  : Double ;
-                            FvProd   : Double ;
-                            FcEANTrib: string ;
-                            FuTrib   : string ;
-                            FqTrib   : Integer;
-                            FvUnTrib : Double ;
-                            FindTot  : Integer;
-                            FxPed    : Integer;
-                            FnItemPed: Integer);
     property CUF      : Integer       read GetCUF      write SetCUF    ;
     property CNF      : Integer       read GetCNF      write SetCNF    ;
     property NatOp    : UnicodeString read GetNatOp    write SetNatOp  ;
@@ -115,7 +98,6 @@ type
     FIndPres  : Integer       ;
     FProcEmi  : Integer       ;
     FVerProc  : UnicodeString ;
-    FListaItem: TList<IItemNFE>;
     function GetCUF      : Integer;
     function GetCNF      : Integer;
     function GetNatOp    : UnicodeString;
@@ -158,23 +140,6 @@ type
     procedure SetIndPres(const AValue: Integer);
     procedure SetProcEmi(const AValue: Integer);
     procedure SetVerProc(const AValue: UnicodeString);
-    procedure AddListaItem( FcProd   : string ;
-                            FcEAN    : string ;
-                            FxProd   : string ;
-                            FNCM     : Integer;
-                            FCEST    : Integer;
-                            FCFOP    : Integer;
-                            FuCom    : string ;
-                            FqCom    : Integer;
-                            FvUnCom  : Double ;
-                            FvProd   : Double ;
-                            FcEANTrib: string ;
-                            FuTrib   : string ;
-                            FqTrib   : Integer;
-                            FvUnTrib : Double ;
-                            FindTot  : Integer;
-                            FxPed    : Integer;
-                            FnItemPed: Integer);
   public
     constructor Create;
   end;
@@ -191,47 +156,6 @@ var
   FIdentificadorNFE: IIdentificadorNFE;
 
 { TIdentificadorNFE }
-
-procedure TIdentificadorNFE.AddListaItem(FcProd   : string ;
-                                         FcEAN    : string ;
-                                         FxProd   : string ;
-                                         FNCM     : Integer;
-                                         FCEST    : Integer;
-                                         FCFOP    : Integer;
-                                         FuCom    : string ;
-                                         FqCom    : Integer;
-                                         FvUnCom  : Double ;
-                                         FvProd   : Double ;
-                                         FcEANTrib: string ;
-                                         FuTrib   : string ;
-                                         FqTrib   : Integer;
-                                         FvUnTrib : Double ;
-                                         FindTot  : Integer;
-                                         FxPed    : Integer;
-                                         FnItemPed: Integer);
-var
-  PosicaoLista: Integer;
-begin
-  FListaItem.Add(TItemNFE.Create);
-  PosicaoLista := FListaItem.count-1;
-  FListaItem[PosicaoLista].cProd   := FcProd;
-  FListaItem[PosicaoLista].cEAN    := FcEAN;
-  FListaItem[PosicaoLista].xProd   := FxProd;
-  FListaItem[PosicaoLista].NCM     := FNCM;
-  FListaItem[PosicaoLista].CEST    := FCEST;
-  FListaItem[PosicaoLista].CFOP    := FCFOP;
-  FListaItem[PosicaoLista].uCom    := FuCom;
-  FListaItem[PosicaoLista].qComp   := FqCom;
-  FListaItem[PosicaoLista].vUnCom  := FvUnCom;
-  FListaItem[PosicaoLista].vProd   := FvProd;
-  FListaItem[PosicaoLista].cEANTrib:= FcEANTrib;
-  FListaItem[PosicaoLista].uTrib   := FuTrib;
-  FListaItem[PosicaoLista].qTrib   := FqTrib;
-  FListaItem[PosicaoLista].indTot  := FindTot;
-  FListaItem[PosicaoLista].xPed    := FxPed;
-  FListaItem[PosicaoLista].nItemPed:= FnItemPed;
-end;
-
 constructor TIdentificadorNFE.Create;
 begin
   FDhEmi   := Emptystr ;

@@ -111,17 +111,16 @@ procedure TLerXML.CarregaDadosItemNFE(const XMLDocument: IXMLNfeProcType);
 begin
   for var I := 0 to XMLDocument.NFe.InfNFe.Det.Count-1 do
   begin
-    NFEIde.AddListaItem(XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CProd,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CEAN,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.XProd,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.NCM,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CEST,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CFOP,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.UCom,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.QCom,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.VUnCom,
-                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.VProd,
-                        );
+//    XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CProd,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CEAN,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.XProd,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.NCM,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CEST,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.CFOP,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.UCom,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.QCom,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.VUnCom,
+//                        XMLDocument.NFe.InfNFe.Det.Items[i].Prod.VProd,
   end;
 end;
 
